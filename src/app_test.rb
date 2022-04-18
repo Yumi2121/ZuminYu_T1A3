@@ -1,5 +1,6 @@
 require_relative '../src/app'
-require_relative '../src/todo_Item'
+require_relative '../src/todo_item'
+
 
 
 app_test = App.new
