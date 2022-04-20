@@ -5,7 +5,6 @@ class App
 
   def initialize
     @to_do_list = []
-
   end
 
   def add(todo_name, high_priority)
@@ -17,6 +16,14 @@ class App
 
   def list
     return @to_do_list
+  end
+
+  def display_todo
+    @to_do_list.each_with_index do |todo_list, index|
+      puts "#{index + 1}. #{todo_list}"
+    end
+    total_num = @to_do_list.length
+    puts "------------------total #{total_num} items."
   end
 
   def delete(index)

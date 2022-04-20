@@ -1,30 +1,36 @@
 require_relative '../src/app'
 require_relative '../src/todo_item'
 require_relative '../src/add_page'
+require_relative '../src/delete_page'
+require 'tty-font'
+require 'colorize'
+require 'tty-box'
+
 
 class MainPage
 
   def initialize
     @app = App.new
+    @app.add("shop tee", "l" )
+    @app.add("see dr", "h")
+    @app.add("buy milk", "l")
   end
 
-  def display_todo
-    for index in 0..(@app.list.length - 1)
-      puts "#{index + 1}. #{@app.list[index]}"
-    end
-  end
 
   def get_user_input
-    puts "Welcome to use To-do-list, let's get start!"
+    font = TTY::Font.new(:starwars)
+    puts font.write("To-do-list").yellow
+    puts "Welcome to MY To do List, Let us get started!".colorize(:blue)
 
     loop do
       puts "----------------------------------"
-      puts "What would you like to do?"
+      puts @app.display_todo
+      puts TTY::Box.frame "What would you like to do?".colorize(:yellow)
       puts "1. Add a to-do."
       puts "2. Delete a to-do from the list."
       puts "3. Search to-do by keyword."
-      puts "4. Sort the to-do list by priority."
-      puts "5. Exit"
+      puts "4. Display the to-do list by date."
+      puts "5. Exit".colorize(:yellow)
       choice = gets.chomp
 
       case choice
@@ -35,11 +41,11 @@ class MainPage
         when "3"
           show_search_page
         when "4"
-          sort_list_by_priority
+          display_todo
         when "5"
-          puts "Exit"
-      else
-        puts "Invalid choice!"
+          break
+        else
+          puts "Invalid choice!"
       end
     end
   end
@@ -54,16 +60,21 @@ class MainPage
   end
 
   def show_delete_page
-    puts "delete"
+    delete_page = DeletePage.new(@app)
+    delete_page.run
   end
 
   def show_search_page
     puts "search"
   end
 
-  def sort_list_by_priority
-    puts "sort"
-  end
+  def display_todo
+    @app.display_todo
 
+    puts "\npress Enter to go back to main page"
+    gets
+
+    system('clear')
+  end
 end
 
