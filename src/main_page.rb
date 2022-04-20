@@ -2,6 +2,7 @@ require_relative '../src/app'
 require_relative '../src/todo_item'
 require_relative '../src/add_page'
 require_relative '../src/delete_page'
+require_relative '../src/search_page'
 require 'tty-font'
 require 'colorize'
 require 'tty-box'
@@ -65,7 +66,8 @@ class MainPage
   end
 
   def show_search_page
-    puts "search"
+    search_page = SearchPage.new(@app)
+    search_page.run
   end
 
   def display_todo

@@ -1,6 +1,5 @@
 require_relative '../src/app'
 require_relative '../src/todo_item'
-require_relative '../src/main_page'
 
 
 class AddPage
