@@ -1,10 +1,11 @@
 require_relative './app'
 
 class App
-  attr_reader :to_do_list
+  attr_reader :to_do_list, :search_result
 
   def initialize
     @to_do_list = []
+
   end
 
   def add(todo_name, high_priority)
@@ -12,6 +13,10 @@ class App
     add_todo = TodoItem.new(todo_name, high_priority)
     # push the new generated to_do to array of todo_list
     @to_do_list << add_todo
+  end
+
+  def sort
+    return @to_do_list.sort_by {|todo| todo.high_priority ? 0 : 1 }
   end
 
   def list

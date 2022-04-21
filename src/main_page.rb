@@ -3,6 +3,7 @@ require_relative '../src/todo_item'
 require_relative '../src/add_page'
 require_relative '../src/delete_page'
 require_relative '../src/search_page'
+require_relative '../src/sort_page'
 require 'tty-font'
 require 'colorize'
 require 'tty-box'
@@ -12,9 +13,9 @@ class MainPage
 
   def initialize
     @app = App.new
-    @app.add("shop tee", "l" )
-    @app.add("see dr", "h")
-    @app.add("buy milk", "l")
+    @app.add("shop tee", false)
+    @app.add("see dr", true)
+    @app.add("buy milk", true)
   end
 
 
@@ -30,8 +31,9 @@ class MainPage
       puts "1. Add a to-do."
       puts "2. Delete a to-do from the list."
       puts "3. Search to-do by keyword."
-      puts "4. Display the to-do list by date."
-      puts "5. Exit".colorize(:yellow)
+      puts "4. Sort to-do list."
+      puts "5. Display the to-do list by date."
+      puts "6. Exit".colorize(:yellow)
       choice = gets.chomp
 
       case choice
@@ -42,8 +44,10 @@ class MainPage
         when "3"
           show_search_page
         when "4"
-          display_todo
+          show_sort_page
         when "5"
+          display_todo
+        when "6"
           break
         else
           puts "Invalid choice!"
@@ -68,6 +72,11 @@ class MainPage
   def show_search_page
     search_page = SearchPage.new(@app)
     search_page.run
+  end
+
+  def show_sort_page
+    sort_page = SortPage.new(@app)
+    sort_page.run
   end
 
   def display_todo
