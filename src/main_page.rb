@@ -13,9 +13,10 @@ class MainPage
 
   def initialize
     @app = App.new
-    @app.add("shop tee", false)
-    @app.add("see dr", true)
-    @app.add("buy milk", true)
+    @app.load
+    # @app.add("shop tee", false)
+    # @app.add("see dr", true)
+    # @app.add("buy milk", true)
   end
 
 
@@ -48,6 +49,7 @@ class MainPage
         when "5"
           display_todo
         when "6"
+          save
           break
         else
           puts "Invalid choice!"
@@ -55,8 +57,12 @@ class MainPage
     end
   end
 
-  def run
-    get_user_input
+  def run(command)
+    if command == "display_sort"
+      puts @app.sort
+    else
+      get_user_input
+    end
   end
 
   def show_add_page
@@ -86,6 +92,10 @@ class MainPage
     $stdin.gets
 
     system('clear')
+  end
+
+  def save
+    @app.save
   end
 end
 

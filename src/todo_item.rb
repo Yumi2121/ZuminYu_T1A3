@@ -17,6 +17,5 @@ class TodoItem
 
     return "#{@todo_name} - #{high_priority_display}"
   end
-
 end
 
