@@ -35,8 +35,9 @@ class App
     if index < @to_do_list.length && index >= 0
       @to_do_list.delete_at(index)
       return true
+    elsif
+      return false
     end
-    return false
   end
 
 
