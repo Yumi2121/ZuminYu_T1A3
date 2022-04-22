@@ -18,3 +18,5 @@ gem "tty-font", "~> 0.5.0"
 gem "tty-box", "~> 0.7.0"
 
 gem "tty-prompt", "~> 0.23.1"
+
+gem "rubocop-shopify", require: false

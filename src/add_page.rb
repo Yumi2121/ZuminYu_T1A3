@@ -11,7 +11,7 @@ class AddPage
   def run
     loop do
       puts "Please enter todo name."
-      todo_name = gets.strip
+      todo_name = $stdin.gets.strip
 
       puts "please enter the priority of this todo. if it's high priority, please type 'h', otherwise type 'l'."
         high_priority = gets.chomp.downcase
@@ -24,7 +24,7 @@ class AddPage
      @app.add(todo_name, high_priority_value)
 
      puts "Do you want to add more todo? (y/n) "
-     choice = gets.chomp.downcase
+     choice = $stdin.gets.chomp.downcase
      if choice == "n"
        break
      end

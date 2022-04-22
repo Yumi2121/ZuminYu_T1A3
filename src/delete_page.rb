@@ -10,7 +10,7 @@ class DeletePage
 
   def run
     puts "Please type the number of todo that you about to delete."
-    choice = gets.chomp.to_i
+    choice = $stdin.gets.chomp.to_i
 
     if @app.delete(choice - 1)
       puts "The selected to-do has been deleted, list updated below"

@@ -34,7 +34,7 @@ class MainPage
       puts "4. Sort to-do list."
       puts "5. Display the to-do list by date."
       puts "6. Exit".colorize(:yellow)
-      choice = gets.chomp
+      choice = $stdin.gets.chomp
 
       case choice
         when "1"
@@ -83,7 +83,7 @@ class MainPage
     @app.display_todo
 
     puts "\npress Enter to go back to main page"
-    gets
+    $stdin.gets
 
     system('clear')
   end

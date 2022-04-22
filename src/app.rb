@@ -18,10 +18,10 @@ class App
   def sort
     return @to_do_list.sort_by {|todo| todo.high_priority ? 0 : 1 }
   end
-
-  def list
-    return @to_do_list
-  end
+  #
+  # def list
+  #   return @to_do_list
+  # end
 
   def display_todo
     @to_do_list.each_with_index do |todo_list, index|
@@ -34,9 +34,9 @@ class App
   def delete(index)
     if index < @to_do_list.length && index >= 0
       @to_do_list.delete_at(index)
-      return true
-    elsif
-      return false
+      true
+    else
+      false
     end
   end
 

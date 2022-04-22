@@ -8,7 +8,7 @@ class SearchPage
 
   def run
     puts "Please type a keyword to help locate the to-do items that you try to find."
-    choice = gets.chomp
+    choice = $stdin.gets.chomp
 
     # return the search result as an to-do item array
     puts @app.search(choice)
