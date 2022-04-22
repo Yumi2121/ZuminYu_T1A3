@@ -7,7 +7,7 @@ The purpose of this app is to help people manage tasks easily by using command l
 
 It's time to say Good-bye to handwritten to-do list!
 
-#### Functionality
+### Functionality
 
 ---
 
@@ -15,7 +15,7 @@ It's time to say Good-bye to handwritten to-do list!
 
 
 
-#### list of Features
+### list of Features
 
 ---
 
@@ -23,17 +23,7 @@ It's time to say Good-bye to handwritten to-do list!
 
 
 
-#### User Instructions
-
----
-
-
-
-
-
-
-
-#### Logic of the application
+### User Instructions
 
 ---
 
@@ -43,7 +33,17 @@ It's time to say Good-bye to handwritten to-do list!
 
 
 
-#### Installation
+### Logic of the application
+
+---
+
+
+
+
+
+
+
+### Installation
 
 ---
 
@@ -54,6 +54,10 @@ To use To-do List, you will need to install Ruby 2.7.5 or over.
 **Dependencies**
 
 
+
+
+
+**system/hardware requirements**
 
 Identify any code style guide or styling conventions that the application will adhere to.
 
@@ -71,7 +75,7 @@ Reference the chosen style guide appropriately.
 
 features of the application.
 
-- system/hardware requirements
+- 
 - Steps to install the application
 
 dependencies required by the application;
