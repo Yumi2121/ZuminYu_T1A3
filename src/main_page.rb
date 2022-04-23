@@ -9,6 +9,7 @@ require 'colorize'
 require 'tty-box'
 
 
+
 class MainPage
 
   def initialize

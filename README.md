@@ -131,6 +131,20 @@ Depending on which option is entered, an appropriate class (AddPage, DeletePage,
 
 
 
+### Code style guide 
+
+---
+
+My to-do List app is using Ruby language, and the code is written following the community Ruby Style Guide provided by Rubocop. 
+
+[![Ruby Style Guide](https://img.shields.io/badge/code_style-rubocop-brightgreen.svg)](https://github.com/rubocop/rubocop)
+
+[![Ruby Style Guide](https://img.shields.io/badge/code_style-community-brightgreen.svg)](https://rubystyle.guide)
+
+
+
+
+
 ### Installation
 
 ---
@@ -152,24 +166,6 @@ To use To-do List, you will need to install Ruby 2.7.5 or over.
 
 
 **Steps in details**
-
-
-
-
-
-### Code style guide 
-
----
-
-
-
-Identify any or styling conventions that the application will adhere to.
-
-Reference the chosen style guide appropriately.
-
-
-
-
 
 features of the application.
 
