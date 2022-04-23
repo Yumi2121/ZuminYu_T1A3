@@ -1,5 +1,6 @@
 require_relative '../src/app'
 require_relative '../src/todo_item'
+require 'colorize'
 
 class SortPage
 
@@ -8,13 +9,13 @@ class SortPage
   end
 
   def run
-    puts "Please see below update to-do list by priority."
+    puts "Please see below update to-do list by priority.".colorize(:blue)
 
     puts @app.sort
 
     puts "-----------------"
     puts "-----------------"
-    puts "Press anything back to mainpage."
+    puts "Press Enter back to mainpage.".colorize(:blue)
     gets
   end
 end

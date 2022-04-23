@@ -1,5 +1,6 @@
 require_relative '../src/app'
 require_relative '../src/todo_item'
+require 'colorize'
 
 class SearchPage
   def initialize(app)
@@ -7,7 +8,7 @@ class SearchPage
   end
 
   def run
-    puts "Please type a keyword to help locate the to-do items that you try to find."
+    puts "Please type a keyword to help locate the to-do items that you try to find.".colorize(:blue)
     choice = $stdin.gets.chomp
 
     # return the search result as an to-do item array

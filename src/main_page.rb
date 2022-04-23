@@ -88,7 +88,7 @@ class MainPage
   def display_todo
     @app.display_todo
 
-    puts "\npress Enter to go back to main page"
+    puts "\npress Enter to go back to main page".colorize(:blue)
     $stdin.gets
 
     system('clear')

@@ -45,7 +45,7 @@ This app can be separated into two parts from code of view: Function and UX. All
 
   This sort feature will allow the user to sort the current to-do list by priority. The high-priority item will be moved to the front of the list, and the low-priority item will go to the back.
 
-  This function also can be achieved by using `ARGV[0]` form command line directly. 
+  This function also can be achieved by using `ARGV[0]` from command line directly. 
 
   
 
@@ -62,6 +62,8 @@ This app can be separated into two parts from code of view: Function and UX. All
 ### User Instructions
 
 ---
+
+User will need Ruby 
 
 
 
@@ -93,7 +95,13 @@ To use To-do List, you will need to install Ruby 2.7.5 or over.
 
 
 
-**system/hardware requirements**
+**System/hardware requirements**
+
+
+
+
+
+**Steps in details**
 
 
 

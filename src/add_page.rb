@@ -1,6 +1,6 @@
 require_relative '../src/app'
 require_relative '../src/todo_item'
-
+require 'colorize'
 
 class AddPage
 
@@ -10,10 +10,10 @@ class AddPage
 
   def run
     loop do
-      puts "Please enter todo name."
+      puts "Please enter todo name.".colorize(:blue)
       todo_name = $stdin.gets.strip
 
-      puts "please enter the priority of this todo. if it's high priority, please type 'h', otherwise type 'l'."
+      puts "please enter the priority of this todo. if it's high priority, please type 'h', otherwise type 'l'.".colorize(:blue)
         high_priority = gets.chomp.downcase
         if high_priority == "h"
           high_priority_value = true
@@ -23,7 +23,7 @@ class AddPage
 
      @app.add(todo_name, high_priority_value)
 
-     puts "Do you want to add more todo? (y/n) "
+     puts "Do you want to add more todo? (y/n) ".colorize(:blue)
      choice = $stdin.gets.chomp.downcase
      if choice == "n"
        break
