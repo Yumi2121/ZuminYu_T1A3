@@ -149,27 +149,50 @@ My to-do List app is using Ruby language, and the code is written following the 
 
 ---
 
-**Ruby**
+- **Ruby**
 
 To use To-do List, you will need to install Ruby 2.7.5 or over.
 
-**Dependencies**
+- **Dependencies**
+
+```
+gem "rspec", "~> 3.11"
+
+gem "colorize", "~> 0.8.1"
+
+gem "logger", "~> 1.5"
+
+gem "tty-font", "~> 0.5.0"
+
+gem "tty-box", "~> 0.7.0"
+
+gem "tty-prompt", "~> 0.23.1"
+```
 
 
 
+- **System/hardware requirements**
 
-
-**System/hardware requirements**
-
-
+​       Computer with Linux system
 
 
 
-**Steps in details**
+- **Steps to install the application**
 
-features of the application.
+  1. install Ruby.
 
-- 
-- Steps to install the application
+  2. install required gems as above by using below command.
 
-dependencies required by the application;
+     ```
+     gem install bundler
+     ```
+
+  3. Run the shell script.
+
+     ```
+     ./todo_list.sh [action]
+     ```
+
+     
+
+     
