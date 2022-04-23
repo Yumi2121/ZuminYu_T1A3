@@ -201,6 +201,6 @@ gem "tty-prompt", "~> 0.23.1"
      ./todo_list.sh [action]
      ```
 
-     
+     Please refer to user instruction for detail manual
 
      
