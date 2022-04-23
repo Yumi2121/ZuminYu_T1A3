@@ -63,19 +63,69 @@ This app can be separated into two parts from code of view: Function and UX. All
 
 ---
 
-User will need Ruby 
+Users will start by running
 
+```
+./todo_list.sh [action]
+```
 
+ action is an optional argument with the possible value of `display_sort` to execute the *display_sort feature* to display the todo list sorted by high priority first. If it is not provided, the application will show a main menu to let the user enter an option to perform an appropriate feature.
 
+You will see the greeting message when the app starts! Then there are 5 option provided:
 
+1. **Add a to-do.** 
 
+   Enter the todo_name.
 
+   Enter the priority as ‘h’ for high priority or ‘l’ as low priority.
+
+   Enter y to add more todo, or n to go back to main menu.
+
+   
+
+2. **Delete a to-do from the list.**
+
+   Enter an index (start from 1) of todo to delete.
+
+   List of todo will be displayed after deletion.
+
+   
+
+3. **Search to-do by keyword.**
+
+   Enter a keyword to search for todo with a partially matched name.
+
+   List of todo with the matched name will be displayed after search. 
+
+   
+
+4. **Sort to-do list.**
+
+   List of todo will be displayed with high-priority todo items on top. 
+
+   
+
+5. **Display the to-do list by date.**
+
+   List of todo will be displayed by the sequence of creation date, with number in front of todo item. 
+
+   
+
+6. **Exit.**
+
+   Todo-list will be saved in a file and exit the app. 
+
+   
+
+   
 
 ### Logic of the application
 
 ---
 
+When the application starts, an `app_start.rb` creates a MainPage class. MainPage creates an app object as it’s instance variable which contains the core logic of the whole application. run method is then executed by passing in the `ARGV[0]`. `ARGV[0]` is an argument which may be sent by user to execute sort todo list method. When `ARGV[0]` is not passed, run method will display the main menu and asks user to enter an option to perform each feature/command. 
 
+Depending on which option is entered, an appropriate class (AddPage, DeletePage, SortPage, SearchPage) which represents each feature will be created, taking an app object as a parameter so they all will share the same app object. `Run` method on the appropriate Page class will be called to execute it’s feature by displaying an appropriate message, asking for user input, calling a respective method within app class and finally displaying the output on screen. Eg. AddPage will display a message asking user to enter a new todo_name and priority, asking them to enter the input, calling `app.add` to actually add the new todo into it’s list.In order for the application to retain the todo list when the application exit, MainPage calls `app.load` during initialisation which loads a `JSON` file containing a list of todo. This JSON file is created by save method (called by MainPage) when the application exit (user choose to exit).
 
 
 
