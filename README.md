@@ -1,7 +1,7 @@
 # My To-do List - Terminal Application
-##### by Zumin Yu
+#### by Zumin Yu
 
-https://github.com/Yumi2121/ZuminYu_T1A3
+
 
 The purpose of this app is to help people manage tasks easily by using the command line in the computer. With the basic but powerful function built within this app, people will find it easy to add, delete, search, sort and save their to-do list on a daily basis. 
 
@@ -23,7 +23,7 @@ This app can be separated into two parts from code of view: Function and UX. All
 
   
 
-  Class App created for holding this method, when you call the **add** method, the user input will be collected as a single to_do item and then this item will be added to an array of to_do_list.
+  Class App created for holding this method, when you call the *add* method, the user input will be collected as a single to_do item and then this item will be added to an array of to_do_list.
 
   
 
@@ -128,6 +128,14 @@ When the application starts, an `app_start.rb` creates a MainPage class. MainPag
 Depending on which option is entered, an appropriate class (AddPage, DeletePage, SortPage, SearchPage) which represents each feature will be created, taking an app object as a parameter so they all will share the same app object. `Run` method on the appropriate Page class will be called to execute it’s feature by displaying an appropriate message, asking for user input, calling a respective method within app class and finally displaying the output on screen. Eg. AddPage will display a message asking user to enter a new todo_name and priority, asking them to enter the input, calling `app.add` to actually add the new todo into it’s list.In order for the application to retain the todo list when the application exit, MainPage calls `app.load` during initialisation which loads a `JSON` file containing a list of todo. This JSON file is created by save method (called by MainPage) when the application exit (user choose to exit).
 
 
+
+
+
+### Github repo link
+
+---
+
+https://github.com/Yumi2121/ZuminYu_T1A3
 
 
 
