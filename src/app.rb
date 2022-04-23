@@ -7,7 +7,6 @@ class App
 
   def initialize
     @to_do_list = []
-
   end
 
   def load
@@ -52,10 +51,6 @@ class App
   def sort
     return @to_do_list.sort_by {|todo| todo.high_priority ? 0 : 1 }
   end
-  #
-  # def list
-  #   return @to_do_list
-  # end
 
   def display_todo
     @to_do_list.each_with_index do |todo_list, index|
