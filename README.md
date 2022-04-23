@@ -1,5 +1,5 @@
 # My To-do List - Terminal Application
-#### by Zumin Yu
+#### **by Zumin Yu**
 
 
 
