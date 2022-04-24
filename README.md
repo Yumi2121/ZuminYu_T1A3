@@ -204,3 +204,11 @@ gem "tty-prompt", "~> 0.23.1"
      Please refer to user instruction for detail manual
 
      
+
+### Extra info
+
+----
+
+Trello board link
+
+https://trello.com/b/WCoUxrG6/terminal-assignment-breakdown-yumi
